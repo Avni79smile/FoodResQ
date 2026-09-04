@@ -1,0 +1,6 @@
+package com.foodresq.matchingservice.entity; import jakarta.persistence.*; import java.time.LocalDateTime;
+@Entity @Table(name="food_matches") public class FoodMatch{
+@Id @GeneratedValue(strategy=GenerationType.UUID) private String matchId; private String donationId,recipientId; private Double matchScore; private String matchReason,status="SUGGESTED"; private LocalDateTime createdAt=LocalDateTime.now();
+public FoodMatch(){} public String getMatchId(){return matchId;} public void setMatchId(String v){matchId=v;} public String getDonationId(){return donationId;} public void setDonationId(String v){donationId=v;}
+public String getRecipientId(){return recipientId;} public void setRecipientId(String v){recipientId=v;} public Double getMatchScore(){return matchScore;} public void setMatchScore(Double v){matchScore=v;}
+public String getMatchReason(){return matchReason;} public void setMatchReason(String v){matchReason=v;} public String getStatus(){return status;} public void setStatus(String v){status=v;} public LocalDateTime getCreatedAt(){return createdAt;}}

@@ -1,0 +1,2 @@
+package com.foodresq.matchingservice.client; import org.springframework.cloud.openfeign.FeignClient; import org.springframework.web.bind.annotation.*;
+@FeignClient(name="donation-service") public interface DonationClient{@GetMapping("/donations/{id}") DonationResponse get(@PathVariable String id);}

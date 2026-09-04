@@ -1,0 +1,8 @@
+Open a terminal in FoodResQ.
+1. mvn clean package
+2. Start service-registry first:
+   mvn -pl service-registry spring-boot:run
+3. In separate terminals start each remaining service.
+4. Start api-gateway last.
+5. Eureka: http://localhost:8761
+6. Gateway: http://localhost:8080

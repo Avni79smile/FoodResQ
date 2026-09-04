@@ -1,0 +1,2 @@
+package com.foodresq.matchingservice.repository; import com.foodresq.matchingservice.entity.FoodMatch; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*;
+public interface FoodMatchRepository extends JpaRepository<FoodMatch,String>{List<FoodMatch> findByDonationId(String id);}
